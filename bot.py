@@ -53,7 +53,7 @@ def cat(update: Update, context: CallbackContext) -> None:
 with open('token') as token:
     updater = Updater(token.read().strip())
 
-# updater.dispatcher.add_handler(CommandHandler('start', start))
+updater.dispatcher.add_handler(CommandHandler('start', start))
 updater.dispatcher.add_handler(CommandHandler('binom', binom))
 updater.dispatcher.add_handler(CommandHandler('hello', hello))
 updater.dispatcher.add_handler(CommandHandler('time', time))
